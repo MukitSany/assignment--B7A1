@@ -3,7 +3,6 @@ function filterEvenNumbers(number: number[]): number[] {
     return number.filter((elem) => elem%2 ===0);
 }
 
-filterEvenNumbers([1, 2, 3, 4, 5, 6])
 
 function reverseString(elem: string): string {
     return elem.split('').reverse().join('');
@@ -11,8 +10,6 @@ function reverseString(elem: string): string {
 
 const result = reverseString("typescript");
 
-
-// type StringOrNumber = string | number;
 
 const checkType = (input: unknown) => {
     if (typeof input === "string" ) {
@@ -32,7 +29,6 @@ const getProperty = <X>(obj: X, key: keyof X) => {
 
 const user = { id: 1, name: "John Doe", age: 21 };
 
-getProperty(user, "name");
 
 
 interface Book {
@@ -51,8 +47,6 @@ function toggleReadStatus(myBook: Book): Book & { isRead: boolean } {
   };
 }
 
-
-toggleReadStatus(myBook)
 
 
 class person {

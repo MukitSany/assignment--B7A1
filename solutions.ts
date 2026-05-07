@@ -12,12 +12,12 @@ function reverseString(elem: string): string {
 const result = reverseString("typescript");
 
 
-type StringOrNumber = string | number;
+// type StringOrNumber = string | number;
 
-const checkType = (value: StringOrNumber) => {
-    if (typeof value === "string" ) {
+const checkType = (input: unknown) => {
+    if (typeof input === "string" ) {
         return "String";
-    } else if (typeof value === "number" ) {
+    } else if (typeof input === "number" ) {
         return "Number";
     } else {
         return "Unknown"
@@ -53,3 +53,38 @@ function toggleReadStatus(myBook: Book): Book & { isRead: boolean } {
 
 
 toggleReadStatus(myBook)
+
+
+class person {
+  public name: string;
+  public age: number;
+  
+  constructor( name: string, age: number) {
+    this.name = name;
+    this.age = age;
+  }
+}
+
+class Student extends person {
+  grade: string;
+
+  constructor(name:string, age:number, grade:string){
+    super(name, age)
+    this.grade = grade
+  }
+
+    getDetails():string {
+    return `Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}`;
+  }
+
+}
+
+const student = new Student("Alice", 20, "A");
+
+
+function getIntersection (arr1:number[], arr2:number[]) {
+  return arr1.filter(elem => arr2.includes(elem));
+}
+
+getIntersection([1, 2, 3, 4, 5], [3, 4, 5, 6, 7])
+

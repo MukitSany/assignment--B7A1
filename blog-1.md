@@ -1,6 +1,6 @@
-# `any` vs `uknown`
+#  `any` vs `uknown`
 
-## ---any---
+##  any
 
 - diseable type checking
 - can assign any type of value without restriction.
@@ -15,7 +15,7 @@ function output(input: any){
 
 output(1)
 ```
-## ---unknown---
+## unknown
 
 - also accept all type value but inforce type safety when try to use
 - checking before performing operation

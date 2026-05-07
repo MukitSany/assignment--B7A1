@@ -1,8 +1,8 @@
-#Keeping code dry with `Pick` and `Omit`
+# Keeping code dry with `Pick` and `Omit`
 
-##In large TypeScript, Developers needs to use multiple interface to share similar fields. This may lead to duplication and maintenance problems.
+## In large TypeScript, Developers needs to use multiple interface to share similar fields. This may lead to duplication and maintenance problems.
 
-##Full Type are 
+## Full Type are 
 
 ```tsx
 type Product = {
@@ -14,7 +14,7 @@ type Product = {
 };
 ```
 
-##Using `Pick`
+## Using `Pick`
 -	Pick Specefic type of utilities.
 -	We must have this type of utilities.
 
@@ -24,7 +24,7 @@ type ProductSummary = Pick<Product, "id" | "name" | "price">;
 
 -	In this TypeScript We must have product id, name and price.
 
-##Using `Omit`
+## Using `Omit`
 -	Omit Specefic type of utilities.
 -	We remove these type from utilities.
 
@@ -34,7 +34,7 @@ type ProductWithoutStock = Omit<Product, "stock" | "color">;
 
 -	We did not use stock and color type from our fields.
 
-##The importance of using `Pick` and `Omit`
+## The importance of using `Pick` and `Omit`
  
 -	Reduce duplication.
 -	Easier Update.
